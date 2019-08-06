@@ -1,0 +1,17 @@
+block content
+    div(id="bodyRoyal")
+        center
+            | Fine for books loaned by you (Click on loan id to pay your Fine)
+            table(border='1')
+                thead
+                    tr
+                        th Loan ID
+                        th ISBN
+                        th FINE
+                tbody
+                    each row in rows
+                        tr
+                            td
+                                a(href='/payfine?loan_id=#{row.loan_id}') #{row.loan_id}
+                            td=row.isbn
+                            td=row.fine_amt

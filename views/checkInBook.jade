@@ -1,0 +1,21 @@
+block content
+    div(id="bodyRoyal")
+        center
+            | List of books loaned by you
+            table(border='1')
+                thead
+                    tr
+                        th Loan ID
+                        th ISBN
+                        th Card ID
+                        th Date Issued
+                        th Due Date
+                tbody
+                    each row in rows
+                        tr
+                            td
+                                a(href='/update?Loan_id=#{row.Loan_id}') #{row.Loan_id}
+                            td=row.ISBN
+                            td=row.card_id
+                            td=row.Date_out
+                            td=row.Due_date

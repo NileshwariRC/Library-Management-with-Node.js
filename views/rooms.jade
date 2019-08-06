@@ -1,0 +1,16 @@
+block content
+    div(id="bodyRoyal")
+        center
+            | Copy ISBN Number to checkout
+            table(border='1')
+                thead
+                    tr
+                        th ISBN
+                        th <T></T>Title
+                        th Author
+                tbody
+                    each row in rows
+                        tr
+                            td=row.ISBN10
+                            td=row.title
+                            td=row.author

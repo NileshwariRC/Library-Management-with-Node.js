@@ -1,0 +1,31 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Test
+        link(rel='stylesheet', type='text/css', href='/css/style.css')
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:300', rel='stylesheet', type='text/css')
+    body
+        .container
+            fieldset
+            center
+                form(method='post')
+
+                    |                               LIBRARY MANAGEMENT SYSTEM
+                    input.ghost-button(type='submit', value='Create Borrower Account', formaction='/newAccount')
+
+                    input.ghost-input(name='borroweridfine', type='text', placeholder='Enter Borrower ID')
+                    input.ghost-button(type='submit', value='Check Fines', formaction='/checkFines')
+
+                    input.ghost-input(name='Searchbyword', type='text', placeholder='Search Book By Word')
+                    input.ghost-button(type='submit', value='Search Book', formaction='/search_book')
+
+                    input.ghost-input(name='ISBNToIssue', type='text', placeholder='Issue me by entering my ISBN')
+                    input.ghost-input(name='cardnumber', type='text', placeholder='Enter card number and be the owner')
+                    input.ghost-button(type='submit', value='Issue Book', formaction='/issue_book')
+
+                    input.ghost-input(name='checkinbook', type='text', placeholder='Enter ISBN OR Card ID')
+                    input.ghost-button(type='submit', value='Check In Book', formaction='/check_in')
+
+
+
